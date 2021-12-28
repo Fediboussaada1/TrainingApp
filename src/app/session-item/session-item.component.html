@@ -1,0 +1,17 @@
+<!--<h2>{{name}}</h2><-->
+<h2>{{session.name}}</h2>
+<div>{{session.track}}</div>
+<div>Prévue le {{session.date | date}} pendant {{session.duree}} jours à {{session.local}}</div>
+<li  [class.inscrire.link-is-disabled]="session.isCompleted" ></li>
+<div>{{session.participants}} Participants</div>
+<div class="tools">
+<a class="delete">
+Details
+</a>
+<a class="inscrire" (click)=inscrire()>
+Inscription
+</a>
+<a class="partager">
+Partager
+</a>
+</div>
